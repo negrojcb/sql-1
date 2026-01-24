@@ -19,67 +19,74 @@
 
 
 -- Ejercicio 6: Encontrar el usuario con el email 'juan.gomez@example.com'.
--- Tu respuesta aquí
+-- SELECT * from usuarios_lenguajes where email = 'juan.gomez@example.com'
 
 
 -- Ejercicio 7: Seleccionar los usuarios que saben Java y tienen menos de 25 años.
--- Tu respuesta aquí
+-- select * from usuarios_lenguajes where lenguaje = "java" and edad < 25;
 
 
 -- Ejercicio 8 OPCION 2: Contar cuántos usuarios con edades diferentes saben el lenguaje 'Java'.
--- Tu respuesta aquí
+-- select count(distinct edad) from usuarios_lenguajes where lenguaje = "java";
 
 
 -- Ejercicio 9: Seleccionar los usuarios que no saben ningún lenguaje.
--- Tu respuesta aquí
+-- select * from usuarios_lenguajes where lenguaje is null;
 
 
 -- Ejercicio 10: Encontrar el nombre y edad del usuario más joven.
--- Tu respuesta aquí
+-- select nombre, edad from usuarios_lenguajes order by edad asc limit 1;
+
 
 
 -- Ejercicio 11: Seleccionar los usuarios y sus edades ordenados por edad de forma descendente.
--- Tu respuesta aquí
+-- select nombre, edad from usuarios_lenguajes order by edad desc;
+
 
 
 -- Ejercicio 12: Contar cuántos usuarios tienen más de 28 años.
--- Tu respuesta aquí
+-- select count(*) from usuarios_lenguajes where edad > 28;
+
 
 
 -- Ejercicio 13: Seleccionar los usuarios cuyo apellido contiene la letra 'a'.
--- Tu respuesta aquí
+-- select * from usuarios_lenguajes where apellido like "%a%";
 
 
 -- Ejercicio 14: Encontrar el lenguaje más popular entre los usuarios menores de 30 años.
--- Tu respuesta aquí
+-- select lenguaje, count(lenguaje) as cantidad from usuarios_lenguajes where edad < 30  group by lenguaje order by cantidad desc limit 1;
 
 
 -- Ejercicio 15: Seleccionar el usuario  mayor de 25 y que sepa el lenguaje 'TypeScript'.
--- Tu respuesta aquí
+-- select nombre, apellido from usuarios_lenguajes where edad > 25 and lenguaje ="typescript";
+
 
 
 -- Ejercicio 16: Contar cuántos usuarios tienen un lenguaje asociado llamado 'Python'.
--- Tu respuesta aquí
+-- select count(*) from usuarios_lenguajes where lenguaje = "python";
+
 
 
 -- Ejercicio 17: Seleccionar los usuarios y sus lenguajes asociados, si tienen alguno, ordenados por nombre de usuario.
--- Tu respuesta aquí
+-- select * from usuarios_lenguajes where lenguaje is not null order by nombre asc;
+
 
 
 -- Ejercicio 18: Encontrar los usuario con el email que contiene la palabra 'example'.
--- Tu respuesta aquí
+-- select * from usuarios_lenguajes where email like "%example%";
 
 
 -- Ejercicio 19: Seleccionar los usuarios que saben al menos un lenguaje y tienen una edad entre 25 y 35 años.
--- Tu respuesta aquí
+-- select * from usuarios_lenguajes where lenguaje is not null and edad > 25 and edad < 35;
+
 
 
 -- Ejercicio 20: Contar cuántos usuarios tienen un lenguaje asociado llamado 'CSS' y tienen menos de 30 años.
--- Tu respuesta aquí
+-- select count(*) from usuarios_lenguajes where lenguaje = "css" and edad < 30;
 
 
 -- Ejercicio 21: Seleccionar los usuarios que tienen al menos un lenguaje asociado y mostrar la cantidad de lenguajes que tienen.
--- Tu respuesta aquí
+-- 
 
 
 -- Ejercicio 22: Encontrar el lenguaje con más caracteres.
